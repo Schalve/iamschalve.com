@@ -82,7 +82,7 @@
                 <div class="layer">
                     <h3>To-Do List</h3>
                     <p>You can write your daily tasks and save them.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://schalve.github.io/To-DoList.com"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -90,7 +90,7 @@
                 <div class="layer">
                     <h3>Calculator</h3>
                     <p>You can calculate your math operations with this calculator.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://schalve.github.io/calculator.com"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -98,20 +98,20 @@
                 <div class="layer">
                     <h3>Digital Clock</h3>
                     <p>A modern clock to put it standby while you are sleeping</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://schalve.github.io/digitalclock.com"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See More</a>
+        <a href="https://schalve.github.io/stopwatch.com" class="btn">See More</a>
     </div>
 </div>
 <!-- ------------contact-------------- -->
 <div id="contact">
     <div class="container">
         <div class="row">
-            <div class="contact-left">
+            <div class="contact">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-brands fa-google"></i>yazanlubbadq1@gmail.com</p>
+                <p><i class="fa-brands fa-google"></i>  yazanlubbadq1@gmail.com  </p>
                 <p><i class="fa-brands fa-microsoft"></i>yazanlubbadq1@hotmail.com</p>
                 <p><i class="fa-solid fa-phone"></i>0551 162 14 74</p>
                 <div class="social-icons">
@@ -121,31 +121,12 @@
                     <a href="https://wa.me/905511621474"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <!-- <form action="https://script.google.com/macros/s/AKfycbxyJr9QbIphJiy_wteaOL0DR37HqU-Ylj3zWcjc1a-PgVxuGePXROkFbBevp1cm8LvYFw/exec" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name"><br>
-                
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br>
-                
-                    <input type="submit" id="submit" value="Submit">
-                  </form> -->
-            </div>
         </div>
     </div>
     <div class="copyright">
         <p>Copyright © Schalve <i class="fa-solid fa-yin-yang"></i>. Made by Yazan Lubbad.</p>
     </div>
 </div>
-
-
 
 
 
@@ -177,40 +158,35 @@
     }
 
 </script>
-<!-- <script>
-    const form = document.forms['submit-to-google-sheet'];
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch('https://script.google.com/macros/s/AKfycbx_aL0VMLE_HF1nQy-KPuDVQ6pGI12Nso_z2XsJF0XqJ-97RqofkRhapnVWb3temzrXyw/exec', {
-            method: 'POST',
-            body: new FormData(form)
-        })
-        .then(response => {
-            if (response.ok) {
-                // Handle success, e.g., display a thank you message
-                console.log('Form submitted successfully');
-                form.reset(); // Clear the form fields
-            } else {
-                // Handle error
-                console.error('Form submission failed');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-</script> -->
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx_aL0VMLE_HF1nQy-KPuDVQ6pGI12Nso_z2XsJF0XqJ-97RqofkRhapnVWb3temzrXyw/exec'
-    const form = document.forms['submit-to-google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
+
+function submitForm(event) {
+  event.preventDefault();
+  var form = event.target;
+  var formData = new FormData(form);
+  var data = {};
+  formData.forEach((value, key) => (data[key] = value));
+
+  fetch('https://script.google.com/macros/s/106hTAkFuxEwZBO0GGDL2rRPoT1DABOtjTs2zLOeY0xI/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+    .then((response) => {
+      // Clear the form or show a success message
+      form.reset();
+      alert('Form submitted successfully!');
     })
-  </script>
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('An error occurred while submitting the form.');
+    });
+}
+
+</script> 
+  
 </body>
 </html>
