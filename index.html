@@ -122,24 +122,21 @@
                 </div>
             </div>
             <div class="contact-right">
-                <!-- <form name="submit-to-google-sheet">
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
-                </form> -->
-                <form action="https://script.google.com/macros/s/AKfycbxyJr9QbIphJiy_wteaOL0DR37HqU-Ylj3zWcjc1a-PgVxuGePXROkFbBevp1cm8LvYFw/exec" method="post">
+                </form>
+                <!-- <form action="https://script.google.com/macros/s/AKfycbxyJr9QbIphJiy_wteaOL0DR37HqU-Ylj3zWcjc1a-PgVxuGePXROkFbBevp1cm8LvYFw/exec" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name"><br>
                 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email"><br>
-
-                    <!-- <label for="message">Message:</label>
-                    <input type="text" id="message" name="message"><br> -->
                 
-                    <input type="submit" value="Submit">
-                  </form>
+                    <input type="submit" id="submit" value="Submit">
+                  </form> -->
             </div>
         </div>
     </div>
@@ -180,12 +177,12 @@
     }
 
 </script>
-<script>
+<!-- <script>
     const form = document.forms['submit-to-google-sheet'];
 
     form.addEventListener('submit', e => {
         e.preventDefault();
-        fetch('https://script.google.com/macros/s/AKfycbzg9fKy8HJGIspChuyiE0-3VSlHDGzdesR5uIoppzLU0aI4m7CcUSD26CUjadvY4kxz/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbx_aL0VMLE_HF1nQy-KPuDVQ6pGI12Nso_z2XsJF0XqJ-97RqofkRhapnVWb3temzrXyw/exec', {
             method: 'POST',
             body: new FormData(form)
         })
@@ -203,6 +200,17 @@
             console.error('Error:', error);
         });
     });
-</script>
+</script> -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx_aL0VMLE_HF1nQy-KPuDVQ6pGI12Nso_z2XsJF0XqJ-97RqofkRhapnVWb3temzrXyw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
