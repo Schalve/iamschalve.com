@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAM SCHALVE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/26e5fd8aaf.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+
+</head>
+<body>
+    
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li> <a href="#header">Home</a></li>
+                <li> <a href="#about">About</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li> <a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Just a Student</p>
+            <h1>Hey, I am <span>Yazan</span><br> Lubbad From Turkey </h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="info">I am Yazan "Schalve" Lubbad. A 16-year-old programmer. Born in Palestine, Gaza. But living in Turkey, Ankara. Student in Kırkkonaklar Anadolu Lisesi; 11th grade. Interested in computers, scouting, volleyball, and skateboarding. Listening to music and playing video games in my spare time. Dreaming of being a Software Engineer. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span><br>The structure of a Web page.</li>
+                        <li><span>CSS</span><br>Giving style to the HTML.</li>
+                        <li><span>JavaScript</span><br>Adding interactivity to web pages and create web applications.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Self-Developer</span><br>Improving myself in everything.</li>
+                        <br>
+                        <li><span>Learning Coding</span><br>Starting From Zero To One Hundred.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - Current</span><br>Kırkkonaklar Anadolu Lisesi</li>
+                        <li><span>2017 - 2019</span><br>İffet Güneşoğlu Ortaokulu</li>
+                        <li><span>2019 - 2021</span><br>Şehit Kalender Özdemir AİHL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------portfolio----------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>To-Do List</h3>
+                    <p>You can write your daily tasks and save them.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>You can calculate your math operations with this calculator.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+                <div class="layer">
+                    <h3>Digital Clock</h3>
+                    <p>A modern clock to put it standby while you are sleeping</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-- ------------contact-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-brands fa-google"></i>yazanlubbadq1@gmail.com</p>
+                <p><i class="fa-brands fa-microsoft"></i>yazanlubbadq1@hotmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0551 162 14 74</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/yazan.lubbad.1/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/schalve_o7"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/skyfv_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/905511621474"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <!-- <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form> -->
+                <form action="https://script.google.com/macros/s/AKfycbxyJr9QbIphJiy_wteaOL0DR37HqU-Ylj3zWcjc1a-PgVxuGePXROkFbBevp1cm8LvYFw/exec" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br>
+
+                    <!-- <label for="message">Message:</label>
+                    <input type="text" id="message" name="message"><br> -->
+                
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Schalve <i class="fa-solid fa-yin-yang"></i>. Made by Yazan Lubbad.</p>
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+
+    var sidemenuu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenuu.style.right = "-5px";
+    }
+    function closemenu(){
+        sidemenuu.style.right = "-220px";
+    }
+
+</script>
+<script>
+    const form = document.forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch('https://script.google.com/macros/s/AKfycbzg9fKy8HJGIspChuyiE0-3VSlHDGzdesR5uIoppzLU0aI4m7CcUSD26CUjadvY4kxz/exec', {
+            method: 'POST',
+            body: new FormData(form)
+        })
+        .then(response => {
+            if (response.ok) {
+                // Handle success, e.g., display a thank you message
+                console.log('Form submitted successfully');
+                form.reset(); // Clear the form fields
+            } else {
+                // Handle error
+                console.error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+</body>
+</html>
